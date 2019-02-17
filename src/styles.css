@@ -2,3 +2,60 @@
   font-family: sans-serif;
   text-align: center;
 }
+.list-beaches-top {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  border-bottom: 1px solid #d5d8df;
+  display: flex;
+}
+.search-beaches-bar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  display: flex;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 0 6px rgba(0, 0, 0, 0.1);
+}
+.search-beaches-input-wrapper {
+  flex: 1;
+  background: #e9e;
+}
+.search-beaches-bar input {
+  width: 100%;
+  padding: 15px 10px;
+  font-size: 1.25em;
+  border: none;
+  outline: none;
+}
+.beach-list {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.beach-list-item {
+  padding: 20px;
+  background: white;
+  display: flex;
+}
+.beach-details {
+  padding-left: 20px;
+  border-left: 1px solid #eee;
+
+  flex: 1;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.beach-details p {
+  margin: 0;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
