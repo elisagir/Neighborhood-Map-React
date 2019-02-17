@@ -1,10 +1,7 @@
 import React, { Component } from "react";
-import { Map, GoogleApiWrapper, InfoWindow, Marker } from "google-maps-react";
-
-const mapStyles = {
-  width: "100%",
-  height: "100%"
-};
+import "./styles.css";
+import Mappa from "./components/Mappa";
+import List from "./components/List";
 
 export class App extends Component {
   state = {
@@ -13,7 +10,7 @@ export class App extends Component {
     selectedPlace: {}, //Shows the infoWindow to the selected place upon a marker
     locations: [
       {
-        id: 1,
+        id: "a123",
         name: "San Vito lo Capo",
         loc: {
           lat: 38.175824,
@@ -21,7 +18,7 @@ export class App extends Component {
         }
       },
       {
-        id: 2,
+        id: "b456",
         name: "Guidaloca",
         loc: {
           lat: 38.056636,
@@ -29,7 +26,7 @@ export class App extends Component {
         }
       },
       {
-        id: 3,
+        id: "c789",
         name: "Riserva naturale dello Zingaro",
         loc: {
           lat: 38.126091,
@@ -37,7 +34,7 @@ export class App extends Component {
         }
       },
       {
-        id: 4,
+        id: "d101",
         name: "Scala dei Turchi",
         loc: {
           lat: 37.927583,
@@ -45,7 +42,7 @@ export class App extends Component {
         }
       },
       {
-        id: 5,
+        id: "e121",
         name: "La Tonnara di Scopello",
         loc: {
           lat: 38.071704,
@@ -69,46 +66,35 @@ export class App extends Component {
       });
     }
   };
+  onClickBeaches = location => {
+    this.setState({
+      locations: location
+    });
+  };
+  onButtonClick = beachName => {
+    document.querySelector(`[title="${beachName}"]`).click();
+  };
   render() {
     return (
-      <Map
-        role="application"
-        aria-label="DAFARE"
-        google={this.props.google}
-        zoom={10}
-        style={mapStyles}
-        initialCenter={{
-          lat: 38.016994,
-          lng: 12.536628
-        }}
-      >
-        {this.state.locations.map(index => {
-          return (
-            <Marker
-              key={index.id}
-              tabIndex="0"
-              position={index.loc}
-              name={index.name}
-              onClick={this.onMarkerClick}
-            />
-          );
-        })}
-
-        <InfoWindow
-          tabIndex="0"
-          marker={this.state.activeMarker}
-          visible={this.state.showingInfoWindow}
+      <div>
+        <List
+          locations={this.state.locations}
+          handleClick={this.onClickBeaches}
+          showingInfoWindow={this.state.showingInfoWindow}
+          selectedPlace={this.state.selectedPlace}
+          onButtonClick={this.onButtonClick}
+        />
+        <Mappa
+          locations={this.state.locations}
+          onMarkerClick={this.onMarkerClick}
+          activeMarker={this.state.activeMarker}
+          showingInfoWindow={this.state.showingInfoWindow}
           onClose={this.onClose}
-        >
-          <div>
-            <h4>{this.state.selectedPlace.name}</h4>
-          </div>
-        </InfoWindow>
-      </Map>
+          selectedPlace={this.state.selectedPlace}
+        />
+      </div>
     );
   }
 }
 
-export default GoogleApiWrapper({
-  apiKey: "AIzaSyDqFlloHIJ_AWR3an0LBsxhrHro-WOPoiM"
-})(App);
+export default App;
