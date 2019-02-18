@@ -11,29 +11,56 @@
 }
 .search-beaches-bar {
   position: fixed;
-  width: 100%;
+  width: 55%;
   top: 0;
-  left: 0;
   z-index: 5;
   display: flex;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 0 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.08), 0 0 20px rgba(0, 0, 0, 0.08);
+  border-radius: 65px;
+  left: 0;
+  right: 0;
+  margin: 20px auto;
 }
 .search-beaches-input-wrapper {
   flex: 1;
-  background: #e9e;
+}
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #aaadb3;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #aaadb3;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #aaadb3;
 }
 .search-beaches-bar input {
   width: 100%;
-  padding: 15px 10px;
+  padding: 22px;
   font-size: 1.25em;
   border: none;
   outline: none;
+  color: #162031;
+  border-radius: 65px;
+  background-image: url(https://uploads.codesandbox.io/uploads/user/8fd6cd19-183f-44ac-b3eb-cd296f83007e/w6DI-search.png);
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  padding-left: 60px;
+  text-transform: capitalize;
 }
 .beach-list {
   width: 100%;
   margin: 0;
   padding: 0;
   list-style-type: none;
+  position: absolute;
+  z-index: 1;
 }
 
 .beach-list-item {
@@ -58,4 +85,37 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.alice-carousel {
+  box-sizing: border-box;
+  position: absolute !important;
+  width: 100%;
+  margin: auto;
+  bottom: 0 !important;
+  z-index: 1 !important;
+}
+
+.beachBox {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 11px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.28);
+}
+
+.beachBox h2 {
+  color: #303d57;
+  font-size: 1.3em;
+  margin: 0;
+}
+
+.alice-carousel__stage-item {
+  padding: 20px 10px;
+}
+
+.alice-carousel__dots,
+.alice-carousel__prev-btn,
+.alice-carousel__next-btn {
+  display: none !important;
 }
