@@ -1,0 +1,82 @@
+[
+  {
+    "id": "a123",
+    "name": "San Vito lo Capo",
+    "loc": {
+      "lat": 38.175824,
+      "lng": 12.738189
+    }
+  },
+  {
+    "id": "b456",
+    "name": "Guidaloca",
+    "loc": {
+      "lat": 38.056636,
+      "lng": 12.840069
+    }
+  },
+  {
+    "id": "c789",
+    "name": "Riserva naturale dello Zingaro",
+    "loc": {
+      "lat": 38.126091,
+      "lng": 12.788149
+    }
+  },
+  {
+    "id": "d101",
+    "name": "Isola delle Femmine",
+    "loc": {
+      "lat": 38.198205,
+      "lng": 13.249322
+    }
+  },
+  {
+    "id": "e121",
+    "name": "La Tonnara di Scopello",
+    "loc": {
+      "lat": 38.071704,
+      "lng": 12.821766
+    }
+  },
+  {
+    "id": "e153",
+    "name": "Cala Rossa",
+    "loc": {
+      "lat": 37.922363,
+      "lng": 12.364616
+    }
+  },
+  {
+    "id": "e129",
+    "name": "Addaura",
+    "loc": {
+      "lat": 38.189269,
+      "lng": 13.349247
+    }
+  },
+  {
+    "id": "e154",
+    "name": "Punta Barcarello",
+    "loc": {
+      "lat": 38.208668,
+      "lng": 13.282432
+    }
+  },
+  {
+    "id": "e159",
+    "name": "Alcamo Marina",
+    "loc": {
+      "lat": 38.035431,
+      "lng": 12.962871
+    }
+  },
+  {
+    "id": "t485",
+    "name": "Terrasini",
+    "loc": {
+      "lat": 38.152553,
+      "lng": 13.077484
+    }
+  }
+]

@@ -11,13 +11,13 @@ export class Mappa extends Component {
     return (
       <Map
         role="application"
-        aria-label="DAFARE"
+        aria-label="Google Maps"
         google={this.props.google}
         zoom={10}
-        style={mapStyles}
+        styles={require("./StyleMap.json")}
         initialCenter={{
-          lat: 38.016994,
-          lng: 12.536628
+          lat: 38.024824,
+          lng: 12.941607
         }}
       >
         {this.props.locations.map(index => {
@@ -28,6 +28,8 @@ export class Mappa extends Component {
               position={index.loc}
               name={index.name}
               onClick={this.props.onMarkerClick}
+              icon={require("./img/pin.png")}
+              animation={this.props.google.maps.Animation.DROP}
             />
           );
         })}
