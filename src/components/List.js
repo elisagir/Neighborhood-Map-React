@@ -6,13 +6,15 @@ export class List extends Component {
   responsive = {
     0: { items: 1 },
     600: { items: 2 },
-    1024: { items: 8 }
+    1024: { items: 4 },
+    1400: { items: 6 },
+    1700: { items: 8 }
   };
 
   galleryItems() {
     return this.props.locations.map((item, i) => (
-      <div key={`key-${i}`} className="beachBox">
-        <button>{item.name}</button>
+      <div key={i} className="beachBox">
+        <button onClick={e => this.props.onClick(e, item)}>{item.name}</button>
       </div>
     ));
   }
@@ -28,7 +30,7 @@ export class List extends Component {
               aria-label="Search input"
               role="search"
               type="text"
-              placeholder="Search best beaches"
+              placeholder="Search beach"
               onChange={e => this.props.filterBeaches(e.target.value)}
             />
           </div>

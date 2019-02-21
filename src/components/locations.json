@@ -1,6 +1,6 @@
 [
   {
-    "id": "a123",
+    "id": "1",
     "name": "San Vito lo Capo",
     "loc": {
       "lat": 38.175824,
@@ -8,7 +8,7 @@
     }
   },
   {
-    "id": "b456",
+    "id": "2",
     "name": "Guidaloca",
     "loc": {
       "lat": 38.056636,
@@ -16,15 +16,15 @@
     }
   },
   {
-    "id": "c789",
-    "name": "Riserva naturale dello Zingaro",
+    "id": "3",
+    "name": "Riserva dello Zingaro",
     "loc": {
       "lat": 38.126091,
       "lng": 12.788149
     }
   },
   {
-    "id": "d101",
+    "id": "4",
     "name": "Isola delle Femmine",
     "loc": {
       "lat": 38.198205,
@@ -32,23 +32,24 @@
     }
   },
   {
-    "id": "e121",
-    "name": "La Tonnara di Scopello",
+    "id": "5",
+    "name": "Tonnara di Scopello",
     "loc": {
       "lat": 38.071704,
       "lng": 12.821766
     }
   },
   {
-    "id": "e153",
+    "id": "6",
     "name": "Cala Rossa",
+    "flickr": "calarossa",
     "loc": {
       "lat": 37.922363,
       "lng": 12.364616
     }
   },
   {
-    "id": "e129",
+    "id": "7",
     "name": "Addaura",
     "loc": {
       "lat": 38.189269,
@@ -56,7 +57,7 @@
     }
   },
   {
-    "id": "e154",
+    "id": "8",
     "name": "Punta Barcarello",
     "loc": {
       "lat": 38.208668,
@@ -64,7 +65,7 @@
     }
   },
   {
-    "id": "e159",
+    "id": "9",
     "name": "Alcamo Marina",
     "loc": {
       "lat": 38.035431,
@@ -72,7 +73,7 @@
     }
   },
   {
-    "id": "t485",
+    "id": "10",
     "name": "Terrasini",
     "loc": {
       "lat": 38.152553,
