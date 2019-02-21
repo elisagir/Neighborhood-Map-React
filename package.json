@@ -11,8 +11,7 @@
     "react": "16.8.0",
     "react-alice-carousel": "1.13.1",
     "react-dom": "16.8.0",
-    "react-scripts": "2.0.3",
-    "sort-by": "1.2.0"
+    "react-scripts": "2.0.3"
   },
   "devDependencies": {},
   "scripts": {
