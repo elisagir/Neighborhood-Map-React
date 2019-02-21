@@ -1,17 +1,16 @@
 import React, { Component } from "react";
 import "./styles.css";
-import Mappa from "./components/Mappa";
+import GoogleMap from "./components/GoogleMap";
 import List from "./components/List";
 import escapeRegExp from "escape-string-regexp";
 import Locations from "./components/locations.json";
-import axios from "axios";
 
 export class App extends Component {
   state = {
-    showingInfoWindow: false, //Hides or the shows the infoWindow
-    activeMarker: {}, //Shows the active marker upon click
-    selectedPlace: {}, //Shows the infoWindow to the selected place upon a marker
-    locations: Locations
+    locations: Locations,
+    showingInfoWindow: false, // Hides or the shows the infoWindow
+    activeMarker: {}, // Shows the active marker upon click
+    selectedPlace: { lat: 0, lng: 0 } // Shows the infoWindow to the selected place upon a marker
   };
 
   onMarkerClick = (props, marker, e) =>
@@ -21,16 +20,17 @@ export class App extends Component {
       showingInfoWindow: true
     });
 
-  onClose = props => {
-    if (this.state.showingInfoWindow) {
-      this.setState({
-        showingInfoWindow: false,
-        activeMarker: null
-      });
-    }
-  };
+  showInfo(e, selectedPlace) {
+    this.setState({
+      selectedPlace: selectedPlace,
+      showingInfoWindow: true,
+      activeMarker: null
+    });
+    console.log(selectedPlace);
+  }
+
   filterBeaches = query => {
-    // Reset to full list of castles if query is empty
+    // Reset list of beaches if query is empty
     if (!query) {
       return this.setState({ locations: Locations });
     }
@@ -39,7 +39,6 @@ export class App extends Component {
     const filterBeaches = Locations.filter(beach => match.test(beach.name));
     this.setState({
       locations: filterBeaches,
-      // Prevent infowindow and selected marker from showing during search
       showingInfoWindow: false,
       selectedPlace: {}
     });
@@ -50,19 +49,17 @@ export class App extends Component {
       <div>
         <List
           locations={this.state.locations}
-          showingInfoWindow={this.state.showingInfoWindow}
-          selectedPlace={this.state.selectedPlace}
           filterBeaches={this.filterBeaches}
-          listItemClicked={this.listItemClicked}
+          onClick={this.showInfo.bind(this)}
         />
-        <Mappa
+        <GoogleMap
           locations={this.state.locations}
           onMarkerClick={this.onMarkerClick}
           activeMarker={this.state.activeMarker}
           showingInfoWindow={this.state.showingInfoWindow}
-          onClose={this.onClose}
           filterBeaches={this.filterBeaches}
           selectedPlace={this.state.selectedPlace}
+          pictures={this.state.pictures}
         />
       </div>
     );

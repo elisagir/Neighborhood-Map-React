@@ -11,7 +11,8 @@
 }
 .search-beaches-bar {
   position: fixed;
-  width: 55%;
+  width: calc(100% - 40px);
+  max-width: 800px;
   top: 0;
   z-index: 5;
   display: flex;
@@ -47,7 +48,7 @@
   outline: none;
   color: #162031;
   border-radius: 65px;
-  background-image: url(https://uploads.codesandbox.io/uploads/user/8fd6cd19-183f-44ac-b3eb-cd296f83007e/w6DI-search.png);
+  background-image: url("https://uploads.codesandbox.io/uploads/user/8fd6cd19-183f-44ac-b3eb-cd296f83007e/w6DI-search.png");
   background-size: 40px;
   background-repeat: no-repeat;
   background-position: 15px center;
@@ -71,10 +72,8 @@
 .beach-details {
   padding-left: 20px;
   border-left: 1px solid #eee;
-
   flex: 1;
   overflow: hidden;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -98,9 +97,8 @@
 .beachBox {
   width: 100%;
   height: 100%;
+  border-radius: 30px;
   background: #fff;
-  border-radius: 11px;
-  padding: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.28);
 }
 
@@ -114,8 +112,76 @@
   padding: 20px 10px;
 }
 
-.alice-carousel__dots,
-.alice-carousel__prev-btn,
-.alice-carousel__next-btn {
+.alice-carousel__dots {
   display: none !important;
+}
+
+button {
+  border: 0;
+  font-size: 0.9em;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  color: #162031;
+  padding: 20px 10px;
+  border-radius: 30px;
+  font-weight: 600;
+  background: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.flickrPhoto {
+  width: 260px;
+}
+
+h4 {
+  margin-bottom: 0;
+  color: #162031;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+p {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.alice-carousel__stage-item {
+  cursor: grab;
+}
+
+.alice-carousel__next-btn-item,
+.alice-carousel__prev-btn-item {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  line-height: 50px;
+  margin: 0;
+}
+
+.alice-carousel__next-btn-item {
+  background: #0ec7b4
+    url("https://uploads.codesandbox.io/uploads/user/8fd6cd19-183f-44ac-b3eb-cd296f83007e/oAPj-download%20(15).png");
+  background-repeat: no-repeat;
+  background-size: 50px;
+  background-position: center;
+}
+
+.alice-carousel__next-btn-item:hover,
+.alice-carousel__prev-btn-item:hover {
+  background-color: #21d39b;
+}
+
+.alice-carousel__prev-btn-item {
+  background: #0ec7b4
+    url("https://uploads.codesandbox.io/uploads/user/8fd6cd19-183f-44ac-b3eb-cd296f83007e/oOCq-left.png");
+  background-repeat: no-repeat;
+  background-size: 50px;
+  background-position: center;
+}
+
+.alice-carousel__next-btn-item span,
+.alice-carousel__prev-btn-item span {
+  color: transparent;
 }
