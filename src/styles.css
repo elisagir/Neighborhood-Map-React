@@ -48,7 +48,7 @@
   outline: none;
   color: #162031;
   border-radius: 65px;
-  background-image: url("https://uploads.codesandbox.io/uploads/user/8fd6cd19-183f-44ac-b3eb-cd296f83007e/w6DI-search.png");
+  background-image: url("./components/img/search.png");
   background-size: 40px;
   background-repeat: no-repeat;
   background-position: 15px center;
@@ -162,7 +162,7 @@ p {
 
 .alice-carousel__next-btn-item {
   background: #0ec7b4
-    url("https://uploads.codesandbox.io/uploads/user/8fd6cd19-183f-44ac-b3eb-cd296f83007e/oAPj-download%20(15).png");
+    url("./components/img/right.png");
   background-repeat: no-repeat;
   background-size: 50px;
   background-position: center;
@@ -175,7 +175,7 @@ p {
 
 .alice-carousel__prev-btn-item {
   background: #0ec7b4
-    url("https://uploads.codesandbox.io/uploads/user/8fd6cd19-183f-44ac-b3eb-cd296f83007e/oOCq-left.png");
+    url("./components/img/left.png");
   background-repeat: no-repeat;
   background-size: 50px;
   background-position: center;
