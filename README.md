@@ -2,7 +2,6 @@
 Project #8 of the Udacity Front-End Nanodegree.
 
 ## Project description:
-Project #8 of the Udacity Front-End Nanodegree.
 A single page application featuring a neighborhood map and a listing of Beaches in Sicily, Italy. The Google Maps API is used to generate the map. The Flickr API is used to get photos to display when a marker is clicked.
 
 ## How to run:
