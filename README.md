@@ -6,8 +6,8 @@ A single page application featuring a neighborhood map and a listing of Beaches 
 
 ## How to run:
 1. Download or Clone the Repository.
-2. Install all project dependencies with npm install.
-3. Start the server with npm start.
+2. Install all project dependencies with `npm install`.
+3. Start the server with `npm start`.
 4. Alternatively, open the [live version of the project](https://vkk675ojy.codesandbox.io/).
 
 ## Service Worker:
