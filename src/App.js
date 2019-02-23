@@ -5,6 +5,11 @@ import List from "./components/List";
 import escapeRegExp from "escape-string-regexp";
 import Locations from "./components/locations.json";
 
+//if the map does not load show alert
+window.gm_authFailure = () => {
+  alert('Google Map failed to load :(');
+}
+
 export class App extends Component {
   state = {
     locations: Locations,
