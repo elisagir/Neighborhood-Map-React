@@ -10,8 +10,8 @@ A single page application featuring a neighborhood map and a listing of Beaches 
 3. Start the server with npm start.
 4. Alternatively, open the [live version of the project](https://vkk675ojy.codesandbox.io/).
 
-## Service Worker
-To load the app in production mode: follow this command: `npm run build` `serve -s build` and then visit `localhost:5000`
+## Service Worker:
+To load the app in production mode, follow this command: `npm run build` `serve -s build` and then visit `localhost:5000`
 
 
 ## Dependencies and Attributions:
